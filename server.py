@@ -11,7 +11,7 @@ events = [
 
 @app.route("/", methods=["GET"])
 def welcome():
-    return send_from_directory(app.static_folder, "index.html"), 200
+    return jsonify({"message": "Welcome!"}), 200
 
 
 @app.route("/events", methods=["GET"])
